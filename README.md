@@ -19,7 +19,7 @@ dependencies{
  ```kotlin
     val colorPicker = ColorPickerDialog(
                         context,
-                        Colors.BLACK, // color init
+                        Color.BLACK, // color init
                         true, // true is show alpha
                         object : ColorPickerDialog.OnColorPickerListener {
                             override fun onCancel(dialog: ColorPickerDialog?) {
