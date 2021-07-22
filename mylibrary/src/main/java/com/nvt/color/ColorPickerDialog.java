@@ -52,17 +52,17 @@ public class ColorPickerDialog {
 
         final View view = LayoutInflater.from(context).inflate(R.layout.color_picker_dialog, null);
         viewHue = view.findViewById(R.id.viewHue);
-        viewSatVal = (ColorPickerSquare) view.findViewById(R.id.viewSatVal);
-        viewCursor = (ImageView) view.findViewById(R.id.viewCursor);
+        viewSatVal = view.findViewById(R.id.viewSatVal);
+        viewCursor = view.findViewById(R.id.viewCursor);
         viewOldColor = view.findViewById(R.id.viewOldColor);
         viewNewColor = view.findViewById(R.id.viewNewColor);
-        viewTarget = (ImageView) view.findViewById(R.id.viewTarget);
-        viewContainerAlpha = (ViewGroup) view.findViewById(R.id.viewContainerAlpha);
-        viewContainerSat = (ViewGroup) view.findViewById(R.id.viewContainerSat);
-        viewContainerHue = (ViewGroup) view.findViewById(R.id.viewContainerHue);
+        viewTarget = view.findViewById(R.id.viewTarget);
+        viewContainerAlpha = view.findViewById(R.id.viewContainerAlpha);
+        viewContainerSat = view.findViewById(R.id.viewContainerSat);
+        viewContainerHue = view.findViewById(R.id.viewContainerHue);
         viewAlphaOverlay = view.findViewById(R.id.viewAlphaOverlay);
-        viewAlphaCursor = (ImageView) view.findViewById(R.id.viewAlphaCursor);
-        viewAlphaCheckered = (ImageView) view.findViewById(R.id.viewAlphaCheckered);
+        viewAlphaCursor = view.findViewById(R.id.viewAlphaCursor);
+        viewAlphaCheckered = view.findViewById(R.id.viewAlphaCheckered);
 
         { // hide/show alpha
             viewAlphaOverlay.setVisibility(isAlpha ? View.VISIBLE : View.GONE);
@@ -73,6 +73,8 @@ public class ColorPickerDialog {
         viewSatVal.setHue(getHue());
         viewOldColor.setBackgroundColor(color);
         viewNewColor.setBackgroundColor(color);
+        viewCursor.setY(viewContainerHue.getY()+10);
+        viewAlphaCursor.setY(viewContainerAlpha.getY()+10);
 
         viewHue.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_MOVE

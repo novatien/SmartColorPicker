@@ -17,7 +17,6 @@
         android:layout_marginBottom="10dp"
         android:clipToPadding="false"
         android:paddingLeft="8dp"
-        android:paddingTop="8dp"
         android:paddingRight="8dp"
         android:paddingBottom="8dp">
 
@@ -56,15 +55,12 @@
             android:layout_width="30dp"
             android:layout_height="240dp"
             android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@id/cardSatVal"
-            app:cardCornerRadius="5dp">
+            android:layout_toRightOf="@id/cardSatVal">
 
             <RelativeLayout
                 android:id="@+id/viewContainerHue"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:clipToPadding="false">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/viewHue"
