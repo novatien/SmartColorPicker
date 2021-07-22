@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/viewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:clipToPadding="false"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSatVal"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/viewContainerSat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clipToPadding="false">
+
+                <com.nvt.color.ColorPickerSquare
+                    android:id="@+id/viewSatVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layerType="software" />
+
+                <ImageView
+                    android:id="@+id/viewTarget"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:scaleType="matrix"
+                    android:src="@drawable/colorpicker_target" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHue"
+            android:layout_width="30dp"
+            android:layout_height="240dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/cardSatVal"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/viewContainerHue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:id="@+id/viewHue"
+                    android:layout_width="30dp"
+                    android:layout_height="240dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/colorpicker_hue" />
+
+                <ImageView
+                    android:id="@+id/viewCursor"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:scaleType="matrix"
+                    android:src="@drawable/colorpicker_cursor" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAlpha"
+            android:layout_width="30dp"
+            android:layout_height="240dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/cardHue"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:id="@+id/viewContainerAlpha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:id="@+id/viewAlphaCheckered"
+                    android:layout_width="30dp"
+                    android:layout_height="240dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/colorpicker_alphacheckered_tiled" />
+
+                <View
+                    android:id="@+id/viewAlphaOverlay"
+                    android:layout_width="30dp"
+                    android:layout_height="240dp" />
+
+
+                <ImageView
+                    android:id="@+id/viewAlphaCursor"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:scaleType="matrix"
+                    android:src="@drawable/colorpicker_cursor" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/colorpicker_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardSatVal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="5dp"
+                android:layout_width="60dp"
+                android:layout_height="30dp">
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="30dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/colorpicker_alphacheckered_tiled" />
+
+                    <View
+                        android:id="@+id/viewOldColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#faa" />
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_right" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                app:cardCornerRadius="5dp">
+
+                <FrameLayout
+                    android:layout_width="60dp"
+                    android:layout_height="30dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/colorpicker_alphacheckered_tiled" />
+
+                    <View
+                        android:id="@+id/viewNewColor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="#aaf" />
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/colorpicker_state"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:background="@drawable/ic_disable_button_color"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="#8A75F2"
+                android:fontFamily="@font/chakrapetch"
+                android:layout_marginRight="20dp"
+                android:text="@android:string/cancel"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/chakrapetch"
+                android:textColor="@android:color/white"
+                android:background="@drawable/ic_enable_button_color"
+                android:layout_marginLeft="20dp"
+                android:text="@android:string/ok"
+                android:textAllCaps="false" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
