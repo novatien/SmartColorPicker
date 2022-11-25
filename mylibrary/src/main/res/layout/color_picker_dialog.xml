@@ -13,18 +13,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:clipToPadding="false"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingBottom="8dp">
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSatVal"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
-            app:cardCornerRadius="5dp">
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_220sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
 
             <RelativeLayout
                 android:id="@+id/viewContainerSat"
@@ -41,8 +41,8 @@
 
                 <ImageView
                     android:id="@+id/viewTarget"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
                     android:scaleType="matrix"
                     android:src="@drawable/colorpicker_target" />
 
@@ -52,9 +52,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardHue"
-            android:layout_width="30dp"
-            android:layout_height="240dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
             android:layout_toRightOf="@id/cardSatVal">
 
             <RelativeLayout
@@ -64,15 +64,15 @@
 
                 <ImageView
                     android:id="@+id/viewHue"
-                    android:layout_width="30dp"
-                    android:layout_height="240dp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_220sdp"
                     android:scaleType="fitXY"
                     android:src="@drawable/colorpicker_hue" />
 
                 <ImageView
                     android:id="@+id/viewCursor"
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
+                    android:layout_width="@dimen/_9sdp"
+                    android:layout_height="@dimen/_9sdp"
                     android:scaleType="matrix"
                     android:src="@drawable/colorpicker_cursor" />
 
@@ -82,11 +82,11 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardAlpha"
-            android:layout_width="30dp"
-            android:layout_height="240dp"
-            android:layout_marginLeft="8dp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
             android:layout_toRightOf="@id/cardHue"
-            app:cardCornerRadius="5dp">
+            app:cardCornerRadius="@dimen/_5sdp">
 
             <RelativeLayout
                 android:id="@+id/viewContainerAlpha"
@@ -97,21 +97,21 @@
 
                 <ImageView
                     android:id="@+id/viewAlphaCheckered"
-                    android:layout_width="30dp"
-                    android:layout_height="240dp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_220sdp"
                     android:scaleType="fitXY"
                     android:src="@drawable/colorpicker_alphacheckered_tiled" />
 
                 <View
                     android:id="@+id/viewAlphaOverlay"
-                    android:layout_width="30dp"
-                    android:layout_height="240dp" />
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_220sdp" />
 
 
                 <ImageView
                     android:id="@+id/viewAlphaCursor"
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
+                    android:layout_width="@dimen/_9sdp"
+                    android:layout_height="@dimen/_9sdp"
                     android:scaleType="matrix"
                     android:src="@drawable/colorpicker_cursor" />
 
@@ -125,18 +125,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/cardSatVal"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                app:cardCornerRadius="5dp"
-                android:layout_width="60dp"
-                android:layout_height="30dp">
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="30dp">
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_30sdp">
 
                     <View
                         android:layout_width="match_parent"
@@ -155,18 +155,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
                 android:src="@drawable/ic_right" />
 
             <androidx.cardview.widget.CardView
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                app:cardCornerRadius="5dp">
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_30sdp"
+                app:cardCornerRadius="@dimen/_5sdp">
 
                 <FrameLayout
-                    android:layout_width="60dp"
-                    android:layout_height="30dp">
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_30sdp">
 
                     <View
                         android:layout_width="fill_parent"
@@ -188,33 +188,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/colorpicker_state"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnCancel"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/ic_disable_button_color"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:textColor="#8A75F2"
                 android:fontFamily="@font/chakrapetch"
-                android:layout_marginRight="20dp"
                 android:text="@android:string/cancel"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="#8A75F2" />
 
             <Button
                 android:id="@+id/btnOK"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/chakrapetch"
-                android:textColor="@android:color/white"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
                 android:background="@drawable/ic_enable_button_color"
-                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/chakrapetch"
                 android:text="@android:string/ok"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
