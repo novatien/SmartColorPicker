@@ -1,4 +1,4 @@
-package com.nvt.color
+package com.nvt.color.demo
 
 import android.app.Application
 
